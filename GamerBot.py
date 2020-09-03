@@ -15,7 +15,7 @@ bot.remove_command("help")
 # when online
 @bot.event
 async def on_ready():
-	activity = discord.Activity(name='!Not used yet!', type=discord.ActivityType.playing)
+	activity = discord.Activity(name='!Not used yet!', type=discord.ActivityType.listening)
 	await bot.change_presence(activity=activity)# .Status.(Idle, do_not_disturb, online)
 
 
