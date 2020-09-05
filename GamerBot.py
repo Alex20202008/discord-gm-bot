@@ -15,14 +15,12 @@ bot.remove_command("help")
 # when online
 @bot.event
 async def on_ready():
-	activity = discord.Activity(name='!Not used yet!', type=discord.ActivityType.listening)
-	await bot.change_presence(activity=activity)# .Status.(Idle, do_not_disturb, online)
+	activity = discord.Activity(name='!!', type=discord.ActivityType.listening)
+	await bot.change_presence(activity=activity)
 
 
 # commands
-@bot.command()
-async def bruh(ctx):
-	await ctx.send("bruuuuh")
+
 
 
 # START!!
