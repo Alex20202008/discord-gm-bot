@@ -15,7 +15,7 @@ bot.remove_command("help")
 # events
 @bot.event
 async def on_ready():
-	activity = discord.Activity(name='!!!', type=discord.ActivityType.listening)
+	activity = discord.Activity(name='!', type=discord.ActivityType.listening)
 	await bot.change_presence(activity=activity)
 
 @bot.event
