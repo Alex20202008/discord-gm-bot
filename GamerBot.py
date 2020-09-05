@@ -15,7 +15,7 @@ bot.remove_command("help")
 # events
 @bot.event
 async def on_ready():
-	activity = discord.Activity(name='!!', type=discord.ActivityType.listening)
+	activity = discord.Activity(name='!!!', type=discord.ActivityType.listening)
 	await bot.change_presence(activity=activity)
 
 @bot.event
@@ -29,7 +29,7 @@ async def on_member_join(user):
 @bot.command()
 async def add_role(ctx):
 	member = ctx.message.author
-	role = get(member.server.roles, name="『🔧』Модератор")
+	role = get(member.server.roles, name="『🖥️』𝕄𝕠𝕕𝕖𝕣𝕒𝕥𝕠𝕣")
 	await bot.add_roles(member, role)
 
 # START!!
