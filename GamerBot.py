@@ -28,9 +28,9 @@ async def on_member_join(user):
 
 @bot.command()
 async def add_role(ctx):
-    member = ctx.message.author
-    role = get(member.server.roles, name="『🖥️』𝕄𝕠𝕕𝕖𝕣𝕒𝕥𝕠𝕣")
-    await bot.add_roles(member, role)
+	member = ctx.message.author
+	role = get(member.server.roles, name="『🔧』Модератор")
+	await bot.add_roles(member, role)
 
 # START!!
 bot.run(TOKEN)
