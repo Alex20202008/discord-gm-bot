@@ -26,7 +26,7 @@ async def on_member_join(user):
 @bot.event
 async def on_member_remove(user):
 	channel_remove = bot.get_channel(719185068349718598)
-	await channel_remove.send(f"{user.display_name} покинул сервер 😟")
+	await channel_remove.send(f"{user.idname} покинул сервер 😟")
 
 # commands
 
