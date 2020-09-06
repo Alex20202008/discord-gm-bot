@@ -33,7 +33,7 @@ async def on_member_remove(user):
 @bot.command()
 async def members(ctx):
     member_count = len(ctx.guild.members) # includes bots
-    await ctx.send(member_count)
+    await ctx.send(f"На сервере {member_count} участников!")
 
 # START!!
 bot.run(TOKEN)
