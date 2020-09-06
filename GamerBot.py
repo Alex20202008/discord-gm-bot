@@ -39,11 +39,11 @@ async def members(ctx):
 
 @bot.command()
 async def avatar(ctx, member: discord.Member):
-	sendAvatar = discord.Embed(
-		color = discord.Color.blue()
-	)
-	sendAvatar.set_image(url={}.fromat(member.avatar_url))
-	await ctx.send(sendAvatar)
+	author = ctx.message.author
+	embed = discord.Embed( description='**Аватарка пользователя ' + str(member.mention) + '**', colour=discord.Colour.purple())
+	embed.set_image(url=member.avatar_url)
+	
+	await ctx.send(embed=embed)
 
 
 # START!!
