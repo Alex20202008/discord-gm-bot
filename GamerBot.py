@@ -28,12 +28,23 @@ async def on_member_remove(user):
 	channel_remove = bot.get_channel(719185068349718598)
 	await channel_remove.send(f"{user.display_name} покинул сервер 😟")
 
-# commands
 
+
+# commands
 @bot.command()
 async def members(ctx):
     member_count = len(ctx.guild.members) # includes bots
     await ctx.send(f"На сервере **{member_count}** участников!")
+
+
+@bot.command()
+async def avatar(ctx, member: discord.Member):
+	sendAvatar = discord.Embed(
+		color = discord.Color.blue()
+	)
+	sendAvatar.set_image(url={}.fromat(member.avatar_url))
+	await ctx.send(sendAvatar)
+
 
 # START!!
 bot.run(TOKEN)
