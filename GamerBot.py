@@ -23,7 +23,7 @@ async def on_member_join(user):
 	channel_rulus = bot.get_channel(718152214547267654)
 	channel_join = bot.get_channel(719185068349718598)
 	chat = bot.get_channel(718170421559558196)
-	await channel_join.send(f"{user.mention}, приветствую на сервере 🙂\nОбязательно прочитай правила в {channel_rulus} и приступай к общению в {chat}")
+	await channel_join.send(f"{user.mention}, приветствую на сервере 🙂\nОбязательно прочитай правила в {channel_rulus.mention} и приступай к общению в {chat.mention}")
 
 @bot.event
 async def on_member_remove(user):
