@@ -20,13 +20,15 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(user):
+	channel_rulus = bot.get_channel(718152214547267654)
 	channel_join = bot.get_channel(719185068349718598)
-	await channel_join.send(f"{user.mention} зашел на сервер 🙂")
+	chat = bot.get_channel(718170421559558196)
+	await channel_join.send(f"{user.mention}, приветствую на сервере 🙂\nОбязательно прочитай правила в {channel_rulus} и приступай к общению в {chat}")
 
 @bot.event
 async def on_member_remove(user):
 	channel_remove = bot.get_channel(719185068349718598)
-	await channel_remove.send(f"{user.display_name} покинул сервер 😟")
+	await channel_remove.send(f"{user.mention} покинул(а) сервер 😟")
 
 
 
@@ -42,7 +44,7 @@ async def avatar(ctx, member: discord.Member):
 	author = ctx.message.author
 	embed = discord.Embed( description='**Аватарка пользователя ' + str(member.mention) + '**', colour=discord.Colour.blue())
 	embed.set_image(url=member.avatar_url)
-	
+
 	await ctx.send(embed=embed)
 
 
