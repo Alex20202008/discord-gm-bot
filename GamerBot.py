@@ -9,7 +9,7 @@ import os
 TOKEN = os.environ.get('TOKEN') # no u
 prefix = "!!"
 bot = commands.Bot(command_prefix = prefix)
-bot.remove_command("help")
+
 
 
 # events
